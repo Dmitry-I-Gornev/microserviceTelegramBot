@@ -23,7 +23,7 @@
     <dependency>
         <groupId>ru.inock.telebot</groupId>
         <artifactId>common-robitmq</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>${common-rabbitmq.version}</version>
     </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

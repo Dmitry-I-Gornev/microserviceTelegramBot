@@ -1,4 +1,4 @@
-package ru.inock.telebot.init;
+package ru.inock.telebot.dispatcherInit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
