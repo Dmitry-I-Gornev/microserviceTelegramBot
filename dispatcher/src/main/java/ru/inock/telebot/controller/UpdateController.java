@@ -1,4 +1,4 @@
-package ru.inock.tb.controller;
+package ru.inock.telebot.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,11 +6,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.inock.tb.config.TelegramBotConfig;
-import ru.inock.tb.service.UpdateProducer;
-import ru.inock.tb.utils.MessageUtil;
-
-import static ru.inock.robbitmq.model.RabbitQueue.*;
+import ru.inock.telebot.config.TelegramBotConfig;
+import ru.inock.telebot.service.UpdateProducer;
+import ru.inock.telebot.utils.MessageUtil;
+import static ru.inock.telebot.model.RabbitQueue.*;
 
 @Component
 @Scope("singleton")
@@ -69,11 +68,13 @@ public class UpdateController {
 
     private void processPhotoMessage(Update update) {
         updateProducer.produce(PHOTO_MESSAGE_UPDATE,update);
+        // log.info("Получена фотография");
         setFileIsReceivedView(update);
     }
 
     private void processDocMessage(Update update) {
         updateProducer.produce(DOC_MESSAGE_UPDATE,update);
+        // log.info("Получен файл");
         setFileIsReceivedView(update);
     }
 

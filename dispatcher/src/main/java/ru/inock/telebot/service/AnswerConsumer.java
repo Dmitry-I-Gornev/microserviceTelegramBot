@@ -1,4 +1,4 @@
-package ru.inock.tb.service;
+package ru.inock.telebot.service;
 
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 

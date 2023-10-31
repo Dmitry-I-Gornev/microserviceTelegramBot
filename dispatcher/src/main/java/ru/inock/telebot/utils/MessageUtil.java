@@ -1,4 +1,4 @@
-package ru.inock.tb.utils;
+package ru.inock.telebot.utils;
 
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package ru.inock.tb;
+package ru.inock.telebot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,8 +1,8 @@
-/*package ru.inock.tb;
+/*package ru.inock.telebot;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import ru.inock.tb.controller.TelegramBot;
+import ru.inock.telebot.controller.TelegramBot;
 
 public class TelegramBotInitialer extends SpringBootServletInitializer {
     @Override

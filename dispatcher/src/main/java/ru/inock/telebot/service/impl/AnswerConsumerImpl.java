@@ -1,14 +1,14 @@
-package ru.inock.tb.service.impl;
+package ru.inock.telebot.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 //import org.jvnet.hk2.annotations.Service;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import ru.inock.tb.controller.UpdateController;
-import ru.inock.tb.service.AnswerConsumer;
+import ru.inock.telebot.controller.UpdateController;
+import ru.inock.telebot.service.AnswerConsumer;
 
-import static ru.inock.robbitmq.model.RabbitQueue.ANSWER_MESSAGE;
+import static ru.inock.telebot.model.RabbitQueue.ANSWER_MESSAGE;
 
 @Service
 @Slf4j

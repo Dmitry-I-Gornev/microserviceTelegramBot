@@ -1,9 +1,9 @@
-package ru.inock.tb.config;
+package ru.inock.telebot.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
-import ru.inock.tb.controller.UpdateController;
+import ru.inock.telebot.controller.UpdateController;
 
 @Component
 @PropertySource("classpath:application.properties")
