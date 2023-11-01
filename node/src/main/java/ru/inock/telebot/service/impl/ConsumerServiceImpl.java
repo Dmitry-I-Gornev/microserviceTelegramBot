@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.inock.telebot.service.ConsumerService;
 import ru.inock.telebot.service.ProducerService;
-//import ru.inock.telebot.service.MainService;
+import ru.inock.telebot.service.MainService;
 import static ru.inock.telebot.model.RabbitQueue.*;
 
 //NODE
@@ -15,20 +15,19 @@ import static ru.inock.telebot.model.RabbitQueue.*;
 @Slf4j
 public class ConsumerServiceImpl implements ConsumerService {
     private final ProducerService producerService;
-    //private final MainService mainService;
+    private final MainService mainService;
 
-    /*public ConsumerServiceImpl(MainService mainService) {
-        this.mainService = mainService;
-    }*/
-    public ConsumerServiceImpl(ProducerService producerService){
+    public ConsumerServiceImpl(ProducerService producerService, MainService mainService) {
         this.producerService = producerService;
+        this.mainService = mainService;
     }
+
 
     @Override
     @RabbitListener(queues = TEXT_MESSAGE_UPDATE)
     public void consumeTextMessageUpdates(Update update) {
-        log.info("NODE: Text message is received");
-        //mainService.processTextMessage(update);
+        log.info("ConsumerService: Text message is received");
+        mainService.processTextMessage(update);
     }
 
     @Override

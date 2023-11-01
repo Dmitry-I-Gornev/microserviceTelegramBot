@@ -1,0 +1,461 @@
+2023-10-31 11:32:19,601 INFO r.i.t.NodeApplication [main] Starting NodeApplication using Java 20.0.2 with PID 5136 (D:\JavaProjects\microserviceTelegramBot\node\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-10-31 11:32:19,608 INFO r.i.t.NodeApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-31 11:32:21,969 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2023-10-31 11:32:21,987 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2023-10-31 11:32:21,992 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-10-31 11:32:21,992 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-31 11:32:22,193 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-10-31 11:32:22,194 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2411 ms
+2023-10-31 11:32:23,641 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-10-31 11:32:23,676 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2023-10-31 11:32:23,719 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2023-10-31 11:32:23,736 INFO r.i.t.NodeApplication [main] Started NodeApplication in 5.409 seconds (process running for 8.682)
+2023-10-31 11:59:12,555 INFO r.i.t.NodeApplication [main] Starting NodeApplication using Java 20.0.2 with PID 9436 (D:\JavaProjects\microserviceTelegramBot\node\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-10-31 11:59:12,561 INFO r.i.t.NodeApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-31 11:59:15,231 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2023-10-31 11:59:15,251 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2023-10-31 11:59:15,256 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-10-31 11:59:15,257 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-31 11:59:15,483 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-10-31 11:59:15,484 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2661 ms
+2023-10-31 11:59:17,178 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-10-31 11:59:17,284 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2023-10-31 11:59:17,342 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2023-10-31 11:59:17,353 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 11:59:17,635 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#1665fa54:0/SimpleConnection@13250132 [delegate=amqp://telebot@192.168.188.3:5672/, localPort=53823]
+2023-10-31 11:59:17,760 INFO r.i.t.NodeApplication [main] Started NodeApplication in 6.603 seconds (process running for 9.958)
+2023-10-31 11:59:17,778 WARN o.s.a.r.l.ConditionalRejectingErrorHandler [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@4cb4e7b3]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[329], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=ec7f7075-18c0-1a54-a83c-e1cb4a73b459, amqp_consumerTag=amq.ctag-k3LtKvhpyqKLvqPc-4QMcg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698742757757}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 11:59:17,811 WARN o.s.a.r.l.ConditionalRejectingErrorHandler$DefaultExceptionStrategy [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@15cbd158(byte[329])' MessageProperties [headers={__TypeId__=org.telegram.telegrambots.meta.api.objects.Update}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=, receivedRoutingKey=text_message_update, deliveryTag=1, consumerTag=amq.ctag-k3LtKvhpyqKLvqPc-4QMcg, consumerQueue=text_message_update])
+2023-10-31 11:59:17,812 ERROR o.s.a.r.l.SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1453)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1751)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1527)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@4cb4e7b3]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	... 10 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[329], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=ec7f7075-18c0-1a54-a83c-e1cb4a73b459, amqp_consumerTag=amq.ctag-k3LtKvhpyqKLvqPc-4QMcg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698742757757}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 12:10:59,065 INFO r.i.t.NodeApplication [main] Starting NodeApplication using Java 20.0.2 with PID 7336 (D:\JavaProjects\microserviceTelegramBot\node\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-10-31 12:10:59,071 INFO r.i.t.NodeApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-31 12:11:01,258 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2023-10-31 12:11:01,274 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2023-10-31 12:11:01,278 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-10-31 12:11:01,279 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-31 12:11:01,454 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-10-31 12:11:01,454 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2227 ms
+2023-10-31 12:11:02,626 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-10-31 12:11:02,742 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2023-10-31 12:11:02,801 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2023-10-31 12:11:02,813 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 12:11:03,124 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#441fbe89:0/SimpleConnection@34045582 [delegate=amqp://telebot@192.168.188.3:5672/, localPort=54230]
+2023-10-31 12:11:03,251 INFO r.i.t.NodeApplication [main] Started NodeApplication in 5.247 seconds (process running for 7.855)
+2023-10-31 12:12:05,751 WARN o.s.a.r.l.ConditionalRejectingErrorHandler [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@5bce08f9]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[329], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=3a3aa723-ccac-20a9-0624-5238b8249c74, amqp_consumerTag=amq.ctag-VBXtbbvr2JbC2imUgXgQYg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698743525736}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 12:12:05,787 WARN o.s.a.r.l.ConditionalRejectingErrorHandler$DefaultExceptionStrategy [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@7ad2606c(byte[329])' MessageProperties [headers={__TypeId__=org.telegram.telegrambots.meta.api.objects.Update}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=, receivedRoutingKey=text_message_update, deliveryTag=1, consumerTag=amq.ctag-VBXtbbvr2JbC2imUgXgQYg, consumerQueue=text_message_update])
+2023-10-31 12:12:05,788 ERROR o.s.a.r.l.SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1453)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1751)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1527)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@5bce08f9]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	... 10 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[329], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=3a3aa723-ccac-20a9-0624-5238b8249c74, amqp_consumerTag=amq.ctag-VBXtbbvr2JbC2imUgXgQYg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698743525736}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 12:13:56,653 INFO r.i.t.NodeApplication [main] Starting NodeApplication using Java 20.0.2 with PID 8084 (D:\JavaProjects\microserviceTelegramBot\node\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-10-31 12:13:56,658 INFO r.i.t.NodeApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-31 12:13:59,151 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2023-10-31 12:13:59,170 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2023-10-31 12:13:59,174 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-10-31 12:13:59,175 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-31 12:13:59,433 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-10-31 12:13:59,434 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2523 ms
+2023-10-31 12:14:00,846 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-10-31 12:14:00,965 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2023-10-31 12:14:01,010 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2023-10-31 12:14:01,019 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 12:14:01,517 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#441fbe89:0/SimpleConnection@34045582 [delegate=amqp://telebot@192.168.188.3:5672/, localPort=54346]
+2023-10-31 12:14:01,629 INFO r.i.t.NodeApplication [main] Started NodeApplication in 6.173 seconds (process running for 9.049)
+2023-10-31 12:14:41,963 WARN o.s.a.r.l.ConditionalRejectingErrorHandler [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@c7f7971]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[330], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=e55d2498-6e32-7a78-ad05-0396c6f0d403, amqp_consumerTag=amq.ctag-JLuNR8jgsT6OqTy8oejBdg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698743681949}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 12:14:41,989 WARN o.s.a.r.l.ConditionalRejectingErrorHandler$DefaultExceptionStrategy [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@393fe023(byte[330])' MessageProperties [headers={__TypeId__=org.telegram.telegrambots.meta.api.objects.Update}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=, receivedRoutingKey=text_message_update, deliveryTag=1, consumerTag=amq.ctag-JLuNR8jgsT6OqTy8oejBdg, consumerQueue=text_message_update])
+2023-10-31 12:14:41,989 ERROR o.s.a.r.l.SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1453)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1751)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1527)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@c7f7971]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	... 10 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[330], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=e55d2498-6e32-7a78-ad05-0396c6f0d403, amqp_consumerTag=amq.ctag-JLuNR8jgsT6OqTy8oejBdg, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698743681949}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 16:00:44,214 INFO r.i.t.NodeApplication [main] Starting NodeApplication using Java 20.0.2 with PID 7124 (D:\JavaProjects\microserviceTelegramBot\node\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-10-31 16:00:44,272 INFO r.i.t.NodeApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-31 16:00:52,128 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2023-10-31 16:00:52,180 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2023-10-31 16:00:52,210 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-10-31 16:00:52,212 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-31 16:00:52,968 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-10-31 16:00:52,970 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 8250 ms
+2023-10-31 16:01:00,371 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-10-31 16:01:00,563 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2023-10-31 16:01:00,960 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2023-10-31 16:01:00,979 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 16:01:06,179 WARN c.r.c.i.ForgivingExceptionHandler [AMQP Connection 192.168.188.3:5672] An unexpected connection driver error occurred (Exception message: Socket closed)
+2023-10-31 16:01:06,185 INFO o.s.a.r.l.SimpleMessageListenerContainer [main] Broker not available; cannot force queue declarations during start: java.util.concurrent.TimeoutException
+2023-10-31 16:01:06,590 INFO o.s.a.r.c.CachingConnectionFactory [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 16:01:07,340 INFO o.s.a.r.c.CachingConnectionFactory [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Created new connection: rabbitConnectionFactory#7efa3f63:1/SimpleConnection@301fe33b [delegate=amqp://telebot@192.168.188.3:5672/, localPort=60184]
+2023-10-31 16:01:07,558 INFO r.i.t.NodeApplication [main] Started NodeApplication in 26.814 seconds (process running for 32.864)
+2023-10-31 16:01:32,479 WARN o.s.a.r.l.ConditionalRejectingErrorHandler [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@276e3ffb]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[330], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=a5a43e32-d4b9-f172-fc48-191e8292cc2c, amqp_consumerTag=amq.ctag-Ey3NumV7aM01FD1lI2FULw, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698757292381}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 16:01:32,609 WARN o.s.a.r.l.ConditionalRejectingErrorHandler$DefaultExceptionStrategy [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@7a87ae71(byte[330])' MessageProperties [headers={__TypeId__=org.telegram.telegrambots.meta.api.objects.Update}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=, receivedRoutingKey=text_message_update, deliveryTag=1, consumerTag=amq.ctag-Ey3NumV7aM01FD1lI2FULw, consumerQueue=text_message_update])
+2023-10-31 16:01:32,610 ERROR o.s.a.r.l.SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1453)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1751)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1527)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@276e3ffb]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	... 10 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[330], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=1, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=a5a43e32-d4b9-f172-fc48-191e8292cc2c, amqp_consumerTag=amq.ctag-Ey3NumV7aM01FD1lI2FULw, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698757292381}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 16:03:29,811 WARN o.s.a.r.l.ConditionalRejectingErrorHandler [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed.
+org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@276e3ffb]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[329], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=2, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=a3476cef-2385-8ec2-2146-270359ca8c93, amqp_consumerTag=amq.ctag-Ey3NumV7aM01FD1lI2FULw, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698757409649}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 16:03:30,500 WARN o.s.a.r.l.ConditionalRejectingErrorHandler$DefaultExceptionStrategy [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Fatal message conversion error; message rejected; it will be dropped or routed to a dead letter exchange, if so configured: (Body:'[B@442882df(byte[329])' MessageProperties [headers={__TypeId__=org.telegram.telegrambots.meta.api.objects.Update}, contentType=application/json, contentEncoding=UTF-8, contentLength=0, receivedDeliveryMode=PERSISTENT, priority=0, redelivered=false, receivedExchange=, receivedRoutingKey=text_message_update, deliveryTag=2, consumerTag=amq.ctag-Ey3NumV7aM01FD1lI2FULw, consumerQueue=text_message_update])
+2023-10-31 16:03:30,505 ERROR o.s.a.r.l.SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Execution of Rabbit message listener failed, and the error handler threw an exception
+org.springframework.amqp.AmqpRejectAndDontRequeueException: Error Handler converted exception to fatal
+	at org.springframework.amqp.rabbit.listener.ConditionalRejectingErrorHandler.handleError(ConditionalRejectingErrorHandler.java:147)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeErrorHandler(AbstractMessageListenerContainer.java:1453)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.handleListenerException(AbstractMessageListenerContainer.java:1751)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1527)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.lambda$executeListener$8(AbstractMessageListenerContainer.java:1484)
+	at io.micrometer.observation.Observation.lambda$observe$0(Observation.java:493)
+	at io.micrometer.observation.Observation.observeWithContext(Observation.java:603)
+	at io.micrometer.observation.Observation.observe(Observation.java:492)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListener(AbstractMessageListenerContainer.java:1484)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.doReceiveAndExecute(SimpleMessageListenerContainer.java:994)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer.receiveAndExecute(SimpleMessageListenerContainer.java:941)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.mainLoop(SimpleMessageListenerContainer.java:1323)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1225)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+Caused by: org.springframework.amqp.rabbit.support.ListenerExecutionFailedException: Listener method could not be invoked with the incoming message
+Endpoint handler details:
+Method [public void ru.inock.telebot.service.impl.ConsumerServiceImpl.consumeTextMessageUpdates(org.telegram.telegrambots.meta.api.objects.Update)]
+Bean [ru.inock.telebot.service.impl.ConsumerServiceImpl@276e3ffb]
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:281)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandlerAndProcessResult(MessagingMessageListenerAdapter.java:224)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.onMessage(MessagingMessageListenerAdapter.java:149)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doInvokeListener(AbstractMessageListenerContainer.java:1663)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.actualInvokeListener(AbstractMessageListenerContainer.java:1582)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.invokeListener(AbstractMessageListenerContainer.java:1570)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.doExecuteListener(AbstractMessageListenerContainer.java:1561)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.executeListenerAndHandleException(AbstractMessageListenerContainer.java:1506)
+	... 10 common frames omitted
+Caused by: org.springframework.messaging.converter.MessageConversionException: Cannot convert from [[B] to [org.telegram.telegrambots.meta.api.objects.Update] for GenericMessage [payload=byte[329], headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=text_message_update, amqp_contentEncoding=UTF-8, amqp_deliveryTag=2, amqp_consumerQueue=text_message_update, amqp_redelivered=false, id=a3476cef-2385-8ec2-2146-270359ca8c93, amqp_consumerTag=amq.ctag-Ey3NumV7aM01FD1lI2FULw, amqp_lastInBatch=false, contentType=application/json, __TypeId__=org.telegram.telegrambots.meta.api.objects.Update, timestamp=1698757409649}]
+	at org.springframework.messaging.handler.annotation.support.PayloadMethodArgumentResolver.resolveArgument(PayloadMethodArgumentResolver.java:151)
+	at org.springframework.amqp.rabbit.listener.adapter.AmqpMessageHandlerMethodFactory$OptionalEmptyAwarePayloadArgumentResolver.resolveArgument(AmqpMessageHandlerMethodFactory.java:99)
+	at org.springframework.messaging.handler.invocation.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:118)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:147)
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:115)
+	at org.springframework.amqp.rabbit.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:75)
+	at org.springframework.amqp.rabbit.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:277)
+	... 17 common frames omitted
+2023-10-31 18:09:38,167 INFO r.i.t.NodeApplication [main] Starting NodeApplication using Java 20.0.2 with PID 3256 (D:\JavaProjects\microserviceTelegramBot\node\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-10-31 18:09:38,174 INFO r.i.t.NodeApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-31 18:09:43,529 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2023-10-31 18:09:43,550 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2023-10-31 18:09:43,555 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-10-31 18:09:43,555 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-31 18:09:43,819 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-10-31 18:09:43,820 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5347 ms
+2023-10-31 18:09:46,717 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-10-31 18:09:46,819 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2023-10-31 18:09:46,874 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2023-10-31 18:09:46,881 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 18:09:52,380 INFO o.s.a.r.l.SimpleMessageListenerContainer [main] Broker not available; cannot force queue declarations during start: java.util.concurrent.TimeoutException
+2023-10-31 18:09:52,385 WARN c.r.c.i.ForgivingExceptionHandler [AMQP Connection 192.168.188.3:5672] An unexpected connection driver error occurred (Exception message: Socket closed)
+2023-10-31 18:09:52,531 INFO o.s.a.r.c.CachingConnectionFactory [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 18:09:57,537 WARN c.r.c.i.ForgivingExceptionHandler [AMQP Connection 192.168.188.3:5672] An unexpected connection driver error occurred (Exception message: Socket closed)
+2023-10-31 18:09:57,537 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 18:10:02,421 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#441fbe89:2/SimpleConnection@4d518c66 [delegate=amqp://telebot@192.168.188.3:5672/, localPort=50162]
+2023-10-31 18:10:02,541 INFO r.i.t.NodeApplication [main] Started NodeApplication in 27.989 seconds (process running for 35.51)
+2023-10-31 18:10:02,577 INFO o.s.a.r.l.SimpleMessageListenerContainer [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] Restarting Consumer@39832280: tags=[[]], channel=null, acknowledgeMode=AUTO local queue size=0
+2023-10-31 18:11:48,480 INFO r.i.t.NodeApplication [main] Starting NodeApplication using Java 20.0.2 with PID 11260 (D:\JavaProjects\microserviceTelegramBot\node\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-10-31 18:11:48,486 INFO r.i.t.NodeApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-10-31 18:11:53,776 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8082 (http)
+2023-10-31 18:11:53,884 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2023-10-31 18:11:54,024 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-10-31 18:11:54,025 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-10-31 18:11:54,569 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-10-31 18:11:54,570 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 5931 ms
+2023-10-31 18:11:57,298 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-10-31 18:11:57,430 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2023-10-31 18:11:57,549 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8082 (http) with context path ''
+2023-10-31 18:11:57,562 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-10-31 18:11:58,102 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#5d94a2dc:0/SimpleConnection@1c98b4eb [delegate=amqp://telebot@192.168.188.3:5672/, localPort=50204]
+2023-10-31 18:11:58,345 INFO r.i.t.NodeApplication [main] Started NodeApplication in 11.901 seconds (process running for 19.788)
+2023-10-31 18:16:23,494 INFO r.i.t.s.i.ConsumerServiceImpl [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] NODE: Text message is received
