@@ -3,10 +3,15 @@ package ru.inock.telebot.service.impl;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.api.objects.User;
+import ru.inock.telebot.dao.AppUserDAO;
 import ru.inock.telebot.dao.RawDataDAO;
+import ru.inock.telebot.entity.AppUser;
 import ru.inock.telebot.entity.RawData;
 import ru.inock.telebot.service.MainService;
 import ru.inock.telebot.service.ProducerService;
+
+import static ru.inock.telebot.entity.enums.UserState.BASIC_STATE;
 
 /*
 import ru.inock.telebot.entity.enums.UserState;
@@ -21,21 +26,25 @@ import static ru.inock.entity.enums.UserState.*;*/
 public class MainServiceImpl implements MainService {
     private final RawDataDAO rawDataDAO;
     private final ProducerService producerService;
+    private final AppUserDAO appUserDAO;
 
-    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService) {
+    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService, AppUserDAO appUserDAO) {
         this.rawDataDAO = rawDataDAO;
         this.producerService = producerService;
+        this.appUserDAO = appUserDAO;
     }
 
     @Override
     public void processTextMessage(Update update) {
 
         saveRowData(update);
-        log.info("MainService(Node): Text message is received");
+        var textMessage = update.getMessage();
+        var telegramUser = textMessage.getFrom();
+        var appUser = findOrSaveAppUser(telegramUser);
         /*
         var appUser = findOrSaveArrUser(update);
         var userState = appUser.getState();
-        var text = update.getMessage().getText();
+
         var output = "";
         var chatID = update.getMessage().getChatId();
 
@@ -53,11 +62,7 @@ public class MainServiceImpl implements MainService {
         sendAnswer(output, chatID);*/
     }
 
-    private void saveRowData(Update update) {
-        RawData rawData = RawData.builder().event(update).build();
-        rawDataDAO.save(rawData);
 
-    }
 
     @Override
     public void processDocMessage(Update update) {
@@ -66,9 +71,30 @@ public class MainServiceImpl implements MainService {
 
     @Override
     public void processPhotoMessage(Update update) {
-
     }
 
+    private void saveRowData(Update update) {
+        RawData rawData = RawData.builder().event(update).build();
+        rawDataDAO.save(rawData);
+    }
+
+    private AppUser findOrSaveAppUser(User telegramUser) {
+        //var telegramUser = update.getMessage().getFrom();
+        AppUser persistentAppUser = appUserDAO.findAppUserByTelegramUserID(telegramUser.getId());
+        if (persistentAppUser == null) {
+            AppUser transientAppUser = AppUser.builder()
+                    .telegramUserID(telegramUser.getId())
+                    .username(telegramUser.getUserName())
+                    .firstName(telegramUser.getFirstName())
+                    .lastName(telegramUser.getLastName())
+                    //TODO изменить значение по умолчанию после добавления регистрации
+                    .isActive(true)
+                    .state(BASIC_STATE)
+                    .build();
+            return appUserDAO.save(transientAppUser);
+        }
+        return persistentAppUser;
+    }
 
    /*
     private final AppUserDAO appUserDAO;*/
@@ -135,23 +161,7 @@ public class MainServiceImpl implements MainService {
         rawDataDAO.save(rawData);
     }
 
-    private AppUser findOrSaveArrUser(Update update) {
-        var telegramUser = update.getMessage().getFrom();
-        AppUser persistentAppUser = appUserDAO.findAppUserByTelegramUserID(telegramUser.getId());
-        if (persistentAppUser == null) {
-            AppUser transientAppUser = AppUser.builder()
-                    .telegramUserID(telegramUser.getId())
-                    .username(telegramUser.getUserName())
-                    .firstName(telegramUser.getFirstName())
-                    .lastName(telegramUser.getLastName())
-                    //TODO изменить значение по умолчанию после добавления регистрации
-                    .active(true)
-                    .state(UserState.BASIC_STATE)
-                    .build();
-            return appUserDAO.save(transientAppUser);
-        }
-        return persistentAppUser;
-    }
+
 
     private String cancelProcess(AppUser appUser) {
         appUser.setState(BASIC_STATE);

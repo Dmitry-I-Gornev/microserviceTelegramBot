@@ -7,6 +7,7 @@
 		<module>dispatcher</module>
         <module>common-robitmq</module>
         <module>node</module>
+        <module>common-jpa</module>
     </modules>
 	<parent>
         <groupId>org.springframework.boot</groupId>
@@ -27,6 +28,7 @@
         <telegrambot.starter.version>6.7.0</telegrambot.starter.version>
         <lombol.version>1.18.28</lombol.version>
         <telegram.version>6.7.0</telegram.version>
+        <common-jpa.version>0.0.1-SNAPSHOT</common-jpa.version>
         <common-rabbitmq.version>0.0.1-SNAPSHOT</common-rabbitmq.version>
 
     </properties>
