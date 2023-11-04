@@ -1,0 +1,46 @@
+2023-11-02 00:08:26,522 INFO r.i.t.DispatcherApplication [main] Starting DispatcherApplication using Java 20.0.2 with PID 6408 (D:\JavaProjects\microserviceTelegramBot\dispatcher\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-11-02 00:08:26,542 INFO r.i.t.DispatcherApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-02 00:08:30,977 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2023-11-02 00:08:31,004 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-11-02 00:08:31,010 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-11-02 00:08:31,011 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-02 00:08:31,338 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-11-02 00:08:31,339 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 4578 ms
+2023-11-02 00:08:33,722 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-11-02 00:08:33,854 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-11-02 00:08:33,925 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-02 00:08:33,948 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-11-02 00:08:34,540 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#19c1820d:0/SimpleConnection@307cf964 [delegate=amqp://telebot@192.168.188.3:5672/, localPort=56557]
+2023-11-02 00:08:36,349 INFO r.i.t.DispatcherApplication [main] Started DispatcherApplication in 10.982 seconds (process running for 16.655)
+2023-11-02 01:04:20,960 INFO r.i.t.DispatcherApplication [main] Starting DispatcherApplication using Java 20.0.2 with PID 11208 (D:\JavaProjects\microserviceTelegramBot\dispatcher\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-11-02 01:04:20,965 INFO r.i.t.DispatcherApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-02 01:04:24,077 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2023-11-02 01:04:24,102 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-11-02 01:04:24,108 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-11-02 01:04:24,109 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-02 01:04:24,345 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-11-02 01:04:24,345 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3230 ms
+2023-11-02 01:04:26,239 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-11-02 01:04:26,349 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-11-02 01:04:26,396 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-02 01:04:26,405 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-11-02 01:04:29,003 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#5529ff44:0/SimpleConnection@2f09e6b2 [delegate=amqp://telebot@192.168.188.3:5672/, localPort=62475]
+2023-11-02 01:04:34,451 INFO r.i.t.DispatcherApplication [main] Started DispatcherApplication in 15.611 seconds (process running for 18.782)
+2023-11-02 01:04:36,912 INFO r.i.t.s.i.UpdateProducerImpl [milk32bot Telegram Executor] test 890
+2023-11-02 01:04:36,965 INFO r.i.t.s.i.UpdateProducerImpl [milk32bot Telegram Executor] test012
+2023-11-02 01:04:36,967 INFO r.i.t.s.i.UpdateProducerImpl [milk32bot Telegram Executor] test123
+2023-11-02 19:22:26,813 INFO r.i.t.DispatcherApplication [main] Starting DispatcherApplication using Java 20.0.2 with PID 8868 (D:\JavaProjects\microserviceTelegramBot\dispatcher\target\classes started by Igor in D:\JavaProjects\microserviceTelegramBot)
+2023-11-02 19:22:26,818 INFO r.i.t.DispatcherApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-11-02 19:22:29,837 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8081 (http)
+2023-11-02 19:22:29,861 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8081"]
+2023-11-02 19:22:29,867 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2023-11-02 19:22:29,868 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/10.1.15]
+2023-11-02 19:22:30,128 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2023-11-02 19:22:30,130 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3164 ms
+2023-11-02 19:22:32,396 WARN o.s.c.LocalVariableTableParameterNameDiscoverer [main] Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: org.springframework.amqp.rabbit.core.RabbitAdmin
+2023-11-02 19:22:32,515 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8081"]
+2023-11-02 19:22:32,585 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8081 (http) with context path ''
+2023-11-02 19:22:32,593 INFO o.s.a.r.c.CachingConnectionFactory [main] Attempting to connect to: [192.168.188.3:5672]
+2023-11-02 19:22:33,018 INFO o.s.a.r.c.CachingConnectionFactory [main] Created new connection: rabbitConnectionFactory#67770b37:0/SimpleConnection@7f22687e [delegate=amqp://telebot@192.168.188.3:5672/, localPort=54373]
+2023-11-02 19:22:38,030 INFO r.i.t.DispatcherApplication [main] Started DispatcherApplication in 13.02 seconds (process running for 18.585)
+2023-11-02 19:24:54,779 INFO r.i.t.s.i.UpdateProducerImpl [milk32bot Telegram Executor] test234

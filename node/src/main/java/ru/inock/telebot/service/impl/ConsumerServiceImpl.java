@@ -7,6 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.inock.telebot.service.ConsumerService;
 import ru.inock.telebot.service.ProducerService;
 import ru.inock.telebot.service.MainService;
+
 import static ru.inock.telebot.model.RabbitQueue.*;
 
 //NODE
@@ -33,14 +34,14 @@ public class ConsumerServiceImpl implements ConsumerService {
     @Override
     @RabbitListener(queues = DOC_MESSAGE_UPDATE)
     public void consumeDocMessageUpdates(Update update) {
-	log.info("NODE: Doc message is received");
-	//mainService.processDocMessage(update);
+        log.info("NODE: Doc message is received");
+        mainService.processDocMessage(update);
     }
 
     @Override
     @RabbitListener(queues = PHOTO_MESSAGE_UPDATE)
     public void consumePhotoMessageUpdates(Update update) {
-	log.info("NODE: Photo message is received");
-        //mainService.processPhotoMessage(update);
+        log.info("NODE: Photo message is received");
+        mainService.processPhotoMessage(update);
     }
 }
