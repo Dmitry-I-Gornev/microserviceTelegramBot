@@ -6,10 +6,15 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.inock.telebot.dao.AppUserDAO;
 import ru.inock.telebot.dao.RawDataDAO;
+import ru.inock.telebot.entity.AppDocument;
 import ru.inock.telebot.entity.AppUser;
 import ru.inock.telebot.entity.RawData;
+import ru.inock.telebot.exceptions.UploadFileException;
+import ru.inock.telebot.service.FileService;
 import ru.inock.telebot.service.MainService;
 import ru.inock.telebot.service.ProducerService;
+import ru.inock.telebot.service.enums.ServiceCommands;
+
 import static ru.inock.telebot.entity.enums.UserState.*;
 import static ru.inock.telebot.service.enums.ServiceCommands.*;
 
@@ -20,11 +25,16 @@ public class MainServiceImpl implements MainService {
     private final RawDataDAO rawDataDAO;
     private final ProducerService producerService;
     private final AppUserDAO appUserDAO;
+    private final FileService fileService;
 
-    public MainServiceImpl(RawDataDAO rawDataDAO, ProducerService producerService, AppUserDAO appUserDAO) {
+    public MainServiceImpl(RawDataDAO rawDataDAO,
+                           ProducerService producerService,
+                           AppUserDAO appUserDAO,
+                           FileService fileService) {
         this.rawDataDAO = rawDataDAO;
         this.producerService = producerService;
         this.appUserDAO = appUserDAO;
+        this.fileService = fileService;
     }
 
     @Override
@@ -37,7 +47,8 @@ public class MainServiceImpl implements MainService {
         var userState = appUser.getState();
         var output = "";
 
-        if (CANCEL.equals(textMessage)) {
+        var serviceCommand = ServiceCommands.fromValue(textMessage);
+        if (CANCEL.equals(serviceCommand)) {
             output = cancelProcess(appUser);
         } else if (BASIC_STATE.equals(userState)) {
             output = producerServiceCommand(textMessage);
@@ -61,8 +72,17 @@ public class MainServiceImpl implements MainService {
             return;
         }
         //TODO Добавить сохранение докуменета (файла)
-        var output = "Файл успешно загружен! Ссылка для скачивания: https://test.ru/get-doc/????";
-        sendAnswer(output, chatID);
+        try {
+            AppDocument doc = fileService.processDoc(update.getMessage());
+            //TODO Добавить генерацию ссылки для скачивания документа
+            var answer = "Документ успешно загружен! "
+                    + "Ссылка для скачивания: http://test.ru/get-doc/777";
+            sendAnswer(answer, chatID);
+        } catch (UploadFileException ex) {
+            log.error(ex.toString());
+            String error = "К сожалению, загрузка файла не удалась. Повторите попытку позже.";
+            sendAnswer(error, chatID);
+        }
 
 
     }
