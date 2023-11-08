@@ -7,6 +7,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.inock.telebot.dao.AppUserDAO;
 import ru.inock.telebot.dao.RawDataDAO;
 import ru.inock.telebot.entity.AppDocument;
+import ru.inock.telebot.entity.AppPhoto;
 import ru.inock.telebot.entity.AppUser;
 import ru.inock.telebot.entity.RawData;
 import ru.inock.telebot.exceptions.UploadFileException;
@@ -96,9 +97,17 @@ public class MainServiceImpl implements MainService {
             return;
         }
         //TODO Добавить сохранение фотографии
-        var output = "Фотография успешно загружена! Ссылка для скачивания: https://test.ru/get-photo/????";
-        log.info(output);
-        sendAnswer(output, chatID);
+        try {
+            AppPhoto photo = fileService.processPhoto(update.getMessage());
+            //TODO добавить генерацию ссылки для скачивания фото
+            var answer = "Фото успешно загружено! "
+                    + "Ссылка для скачивания: http://test.ru/get-photo/777";
+            sendAnswer(answer, chatID);
+        } catch (UploadFileException ex) {
+            log.error(String.valueOf(ex));
+            String error = "К сожалению, загрузка фото не удалась. Повторите попытку позже.";
+            sendAnswer(error, chatID);
+        }
     }
 
     private void saveRowData(Update update) {
