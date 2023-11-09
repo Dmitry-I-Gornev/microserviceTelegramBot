@@ -4,3 +4,4 @@ logs/
 /notes/
 application.properties
 *.gz
+*.tmp
