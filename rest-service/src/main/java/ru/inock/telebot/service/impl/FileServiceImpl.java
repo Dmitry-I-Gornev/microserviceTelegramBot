@@ -2,8 +2,10 @@ package ru.inock.telebot.service.impl;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Service;
+import ru.inock.telebot.CryptoTool;
 import ru.inock.telebot.dao.AppDocumentDAO;
 import ru.inock.telebot.dao.AppPhotoDAO;
 import ru.inock.telebot.entity.AppDocument;
@@ -19,6 +21,8 @@ import java.io.IOException;
 public class FileServiceImpl implements FileService {
     private final AppDocumentDAO appDocumentDAO;
     private final AppPhotoDAO appPhotoDAO;
+    @Autowired
+    CryptoTool cryptoTool;
 
     public FileServiceImpl(AppDocumentDAO appDocumentDAO, AppPhotoDAO appPhotoDAO) {
         this.appDocumentDAO = appDocumentDAO;
@@ -28,15 +32,16 @@ public class FileServiceImpl implements FileService {
 
     @Override
     public AppDocument getDocument(String docId){
-        var id = Long.parseLong(docId);
-        //TODO добавить дешифрование хеш-строки
+
+        var id = cryptoTool.idOf(docId);
         return appDocumentDAO.findById(id).orElse(null);
     };
 
     @Override
     public AppPhoto getPhoto(String idPhoto){
-        var id = Long.parseLong(idPhoto);
-        //TODO добавить дешифрование хеш-строки
+        System.out.println("idPhoto: " + idPhoto);
+        var id = cryptoTool.idOf(idPhoto);
+        System.out.println("id: " + id);
         return appPhotoDAO.findById(id).orElse(null);
 
     };

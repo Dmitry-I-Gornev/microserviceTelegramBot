@@ -14,6 +14,7 @@ import ru.inock.telebot.exceptions.UploadFileException;
 import ru.inock.telebot.service.FileService;
 import ru.inock.telebot.service.MainService;
 import ru.inock.telebot.service.ProducerService;
+import ru.inock.telebot.service.enums.LinkType;
 import ru.inock.telebot.service.enums.ServiceCommands;
 
 import static ru.inock.telebot.entity.enums.UserState.*;
@@ -72,12 +73,10 @@ public class MainServiceImpl implements MainService {
         if (isNotAllowToSendContent(chatID, appUser)) {
             return;
         }
-        //TODO Добавить сохранение докуменета (файла)
         try {
             AppDocument doc = fileService.processDoc(update.getMessage());
-            //TODO Добавить генерацию ссылки для скачивания документа
-            var answer = "Документ успешно загружен! "
-                    + "Ссылка для скачивания: http://test.ru/get-doc/777";
+            String link = fileService.generateLink(doc.getId(), LinkType.GET_DOC);
+            var answer = "Документ успешно загружен! Ссылка для скачивания: " + link;
             sendAnswer(answer, chatID);
         } catch (UploadFileException ex) {
             log.error(ex.toString());
@@ -96,12 +95,10 @@ public class MainServiceImpl implements MainService {
         if (isNotAllowToSendContent(chatID, appUser)) {
             return;
         }
-        //TODO Добавить сохранение фотографии
         try {
             AppPhoto photo = fileService.processPhoto(update.getMessage());
-            //TODO добавить генерацию ссылки для скачивания фото
-            var answer = "Фото успешно загружено! "
-                    + "Ссылка для скачивания: http://test.ru/get-photo/777";
+            String link = fileService.generateLink(photo.getId(), LinkType.GET_PHOTO);
+            var answer = "Фото успешно загружено! Ссылка для скачивания: " + link;
             sendAnswer(answer, chatID);
         } catch (UploadFileException ex) {
             log.error(String.valueOf(ex));
